@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beginner WAF Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Web Application Firewall</h1>
+    <p>Traffic Monitoring & Security Dashboard</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Firewall Status</h2>
+      <p id="status">Monitoring requests</p>
+      <button id="refresh">Refresh Logs</button>
+    </section>
+
+    <section class="card">
+      <h2>Test a Request</h2>
+      <input id="testPath" value="/home" aria-label="Request path">
+      <button id="test">Test Request</button>
+      <p id="result">Ready to test.</p>
+    </section>
+
+    <section class="card">
+      <h2>Recent Traffic Logs</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Request</th>
+              <th>Status</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody id="logs"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
